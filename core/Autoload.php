@@ -63,7 +63,7 @@ class AutoLoad
         $prefix = $class;
         
         //通过命名空间去查找对应的文件
-        while (false !== $pos = strrpos($prefix, '\\')) {
+        while (false !== ($pos = strrpos($prefix, '\\'))) {
             
             // 可能存在的命名空间前缀
             $prefix = substr($class, 0, $pos + 1);
